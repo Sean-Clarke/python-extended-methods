@@ -1,5 +1,15 @@
 """Python extended methods"""
 
+def mysort(l):
+    """Sorts the given list l"""
+    srt = [i for i in range(len(l) - 1)]
+    while srt != []:
+        if l[srt[0]] > l[srt[0] + 1]:
+            l[srt[0]], l[srt[0] + 1] = l[srt[0] + 1], l[srt[0]]
+            if srt[0] != 0:
+                srt.append(srt[0] - 1)
+        srt = srt[1:]
+
 def factorial(i):
     """Given positive integer i, returns !i"""
     n = 1
