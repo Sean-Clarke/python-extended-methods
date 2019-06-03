@@ -63,6 +63,10 @@ def count_instances(m, array):
         if item == m:
             count += 1
     return count
+
+def decimal_to_binary(i):
+    """Given an integer i, returns a list representation of the integer in binary"""
+    return [i] if i < 2 else decimal_to_binary(i // 2) + [int(i % 2 == 1)]
     
 def count_no_overlap_neighbour_grouped_patterns(l):
     """ """
